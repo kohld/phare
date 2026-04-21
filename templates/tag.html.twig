@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Tag: {{ tag }} — {{ title }}{% endblock %}
+
+{% block content %}
+<h1>Posts tagged "{{ tag }}"</h1>
+
+{% if posts is empty %}
+    <p>No posts.</p>
+{% else %}
+    <ul style="list-style: none; padding: 0;">
+        {% for post in posts %}
+        <li style="margin-bottom: 1.5rem;">
+            <h2 style="margin-bottom: 0.25rem;"><a href="{{ base_path }}{{ post.url }}">{{ post.title }}</a></h2>
+            <div class="post-meta">{{ post.date|date(date_format|default('F j, Y')) }}</div>
+            <p>{{ post.excerpt }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
+<p><a href="{{ base_path }}/">← Back to index</a></p>
+{% endblock %}

@@ -1,0 +1,57 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended"],
+  "timezone": "Europe/Berlin",
+  "schedule": ["before 6am on monday"],
+  "labels": ["dependencies"],
+  "assignees": ["kohld"],
+  "prConcurrentLimit": 5,
+  "prHourlyLimit": 0,
+  "dependencyDashboard": true,
+  "semanticCommits": "enabled",
+  "rangeStrategy": "bump",
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": ["before 6am on monday"]
+  },
+  "packageRules": [
+    {
+      "description": "Auto-merge minor and patch updates",
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true,
+      "automergeType": "pr",
+      "matchCurrentVersion": "!/^0/"
+    },
+    {
+      "description": "Group all non-major updates",
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "all non-major dependencies",
+      "groupSlug": "all-minor-patch"
+    },
+    {
+      "description": "Separate PRs for major updates",
+      "matchUpdateTypes": ["major"],
+      "automerge": false
+    },
+    {
+      "description": "Group PHPUnit and test packages",
+      "groupName": "test packages",
+      "matchPackageNames": ["/^phpunit\//", "/^phpstan\//", "/^friendsofphp\//"]
+    },
+    {
+      "description": "Group Docker base images",
+      "groupName": "docker images",
+      "matchManagers": ["dockerfile", "docker-compose"]
+    },
+    {
+      "description": "Update GitHub Actions monthly",
+      "matchManagers": ["github-actions"],
+      "extends": ["schedule:monthly"],
+      "automerge": true
+    }
+  ],
+  "vulnerabilityAlerts": {
+    "labels": ["security"],
+    "assignees": ["kohld"]
+  }
+}

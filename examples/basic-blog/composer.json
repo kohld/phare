@@ -1,0 +1,13 @@
+{
+    "name": "kohld/phare-basic-blog",
+    "description": "Basic blog example for Phare SSG",
+    "require": {
+        "kohld/phare": "*"
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../../"
+        }
+    ]
+}

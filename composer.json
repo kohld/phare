@@ -1,0 +1,52 @@
+{
+    "name": "kohld/phare",
+    "description": "A minimalist PHP static site generator for GitHub Pages",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["ssg", "static-site-generator", "php", "twig", "markdown"],
+    "authors": [
+        {
+            "name": "Dennes Kohl",
+            "email": "dennes.kohl@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "twig/twig": "^3.8",
+        "symfony/yaml": "^7.0",
+        "league/commonmark": "^2.6"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.10",
+        "phpunit/phpunit": "^11.0",
+        "friendsofphp/php-cs-fixer": "^3.49",
+        "phpstan/extension-installer": "^1.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Phare\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Phare\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "test:coverage": "phpunit --coverage-html coverage --coverage-text",
+        "lint": "php-cs-fixer fix --dry-run --diff",
+        "lint:fix": "php-cs-fixer fix",
+        "analyze": "phpstan analyse",
+        "ci": [
+            "@lint",
+            "@analyze",
+            "@test"
+        ]
+    },
+    "config": {
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        }
+    }
+}

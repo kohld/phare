@@ -1,0 +1,9 @@
+title: "My Blog"
+description: "A minimal blog powered by Phare"
+url: "https://example.com"
+language: en
+output_dir: output
+posts_dir: posts
+templates_dir: ../../templates
+date_format: "F j, Y"
+posts_per_page: 10

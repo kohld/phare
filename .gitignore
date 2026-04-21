@@ -1,0 +1,15 @@
+vendor/
+composer.lock
+build/
+output/
+examples/*/output/
+coverage/
+tmp/
+.php-cs-fixer.cache
+.phpunit.result.cache
+.env
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.log

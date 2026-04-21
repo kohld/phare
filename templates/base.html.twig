@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="{{ language|default('en') }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{{ title }}{% endblock %}</title>
+    <meta name="description" content="{% block description %}{{ description|default('') }}{% endblock %}">
+    <style>
+        body { font-family: system-ui, sans-serif; max-width: 720px; margin: 0 auto; padding: 1rem 2rem; line-height: 1.6; color: #222; }
+        a { color: #2563eb; }
+        nav { margin-bottom: 2rem; }
+        nav a { font-weight: bold; font-size: 1.25rem; text-decoration: none; }
+        footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #e5e7eb; color: #6b7280; font-size: 0.875rem; }
+        .post-meta { color: #6b7280; font-size: 0.875rem; margin-bottom: 1rem; }
+        .tag { background: #f3f4f6; padding: 0.125rem 0.5rem; border-radius: 9999px; font-size: 0.75rem; text-decoration: none; color: #374151; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav><a href="{{ base_path }}/">{{ title }}</a></nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>{{ title }}</p>
+    </footer>
+</body>
+</html>
