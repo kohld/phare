@@ -27,7 +27,7 @@ final class Generator
 
     public function generate(): void
     {
-        $outputDir = $this->baseDir . '/' . ($this->config['output_dir'] ?? 'output');
+        $outputDir = $this->baseDir . '/' . (\is_string($this->config['output_dir'] ?? null) ? $this->config['output_dir'] : 'output');
         $this->ensureDir($outputDir);
 
         $collection = $this->loadPosts()->filterPublished()->sortByDate();
@@ -42,7 +42,7 @@ final class Generator
 
     private function loadPosts(): Collection
     {
-        $postsDir = $this->baseDir . '/' . ($this->config['posts_dir'] ?? 'posts');
+        $postsDir = $this->baseDir . '/' . (\is_string($this->config['posts_dir'] ?? null) ? $this->config['posts_dir'] : 'posts');
 
         if (!is_dir($postsDir)) {
             return new Collection([]);
@@ -144,7 +144,7 @@ final class Generator
         $dirs = [];
 
         if (isset($this->config['templates_dir'])) {
-            $dirs[] = $this->baseDir . '/' . $this->config['templates_dir'];
+            $dirs[] = $this->baseDir . '/' . (string) $this->config['templates_dir'];
         }
 
         $dirs[] = __DIR__ . '/../templates';

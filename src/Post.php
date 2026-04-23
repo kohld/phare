@@ -42,7 +42,7 @@ final class Post
         return new self(
             title: \is_string($frontmatter['title'] ?? null) ? $frontmatter['title'] : $slug,
             date: $date,
-            tags: \is_array($frontmatter['tags'] ?? null) ? $frontmatter['tags'] : [],
+            tags: array_values(array_filter(\is_array($frontmatter['tags'] ?? null) ? $frontmatter['tags'] : [], 'is_string')),
             category: \is_string($frontmatter['category'] ?? null) ? $frontmatter['category'] : null,
             draft: (bool) ($frontmatter['draft'] ?? false),
             slug: $slug,
