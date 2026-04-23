@@ -11,10 +11,10 @@
         }
     ],
     "require": {
-        "php": "^8.2",
-        "twig/twig": "^3.8",
+        "php": "^8.5.5",
+        "twig/twig": "^3.24.0",
         "symfony/yaml": "^8.0.8",
-        "league/commonmark": "^2.6"
+        "league/commonmark": "^2.8.2"
     },
     "require-dev": {
         "phpstan/phpstan": "^2.1.51",
