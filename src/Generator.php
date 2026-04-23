@@ -143,8 +143,8 @@ final class Generator
     {
         $dirs = [];
 
-        if (isset($this->config['templates_dir'])) {
-            $dirs[] = $this->baseDir . '/' . (string) $this->config['templates_dir'];
+        if (\is_string($this->config['templates_dir'] ?? null)) {
+            $dirs[] = $this->baseDir . '/' . $this->config['templates_dir'];
         }
 
         $dirs[] = __DIR__ . '/../templates';
