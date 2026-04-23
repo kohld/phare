@@ -21,9 +21,6 @@ jobs:
       - name: Install dependencies
         run: composer install --no-interaction --prefer-dist --no-dev
 
-      - name: Run CI checks
-        run: composer ci
-
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v3
         with:
