@@ -4,6 +4,7 @@
 ![PHPStan](https://img.shields.io/github/actions/workflow/status/kohld/phare/phpstan.yml?branch=main&style=flat-square&label=PHPStan)
 ![PHP CS Fixer](https://img.shields.io/github/actions/workflow/status/kohld/phare/php-cs-fixer.yml?branch=main&style=flat-square&label=CS+Fixer)
 ![Security Audit](https://img.shields.io/github/actions/workflow/status/kohld/phare/security-audit.yml?branch=main&style=flat-square&label=Security+Audit)
+![Latest Release](https://img.shields.io/github/v/release/kohld/phare?style=flat-square&label=Release)
 
 A minimalist PHP static site generator for GitHub Pages.
 
