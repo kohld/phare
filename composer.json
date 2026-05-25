@@ -12,8 +12,8 @@
     ],
     "require": {
         "php": "^8.5.6",
-        "twig/twig": "^3.25.0",
-        "symfony/yaml": "^8.0.11",
+        "twig/twig": "^3.26.0",
+        "symfony/yaml": "^8.0.12",
         "league/commonmark": "^2.8.2"
     },
     "require-dev": {
