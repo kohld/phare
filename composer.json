@@ -19,7 +19,7 @@
     "require-dev": {
         "phpstan/phpstan": "^2.2.2",
         "phpunit/phpunit": "^13.2.1",
-        "friendsofphp/php-cs-fixer": "^3.95.10",
+        "friendsofphp/php-cs-fixer": "^3.95.11",
         "phpstan/extension-installer": "^1.4.3"
     },
     "autoload": {
