@@ -17,9 +17,9 @@
         "league/commonmark": "^2.8.3"
     },
     "require-dev": {
-        "phpstan/phpstan": "^2.2.6",
-        "phpunit/phpunit": "^13.2.5",
-        "friendsofphp/php-cs-fixer": "^3.95.17",
+        "phpstan/phpstan": "^2.2.7",
+        "phpunit/phpunit": "^13.2.6",
+        "friendsofphp/php-cs-fixer": "^3.95.18",
         "phpstan/extension-installer": "^1.4.3"
     },
     "autoload": {
