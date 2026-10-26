@@ -11,7 +11,7 @@
         }
     ],
     "require": {
-        "php": "^8.5.11",
+        "php": "^8.5.12",
         "twig/twig": "^3.30.0",
         "symfony/yaml": "^8.1.9",
         "league/commonmark": "^2.10.4"
